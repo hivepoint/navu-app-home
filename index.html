@@ -3,190 +3,130 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Navu</title>
-  <meta name="description" content="Understand customer journeys. Guide them to conversion.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://navu.app">
-  <meta property="og:title" content="Navu">
-  <meta property="og:description" content="Understand customer journeys. Guide them to conversion.">
 
-  <link rel="icon" href="./images/fav.png" type="image/png">
-  <link rel="preload" crossorigin href="./fonts/raleway-400.woff" as="font">
+  <link rel="preload" href="/home.css" as="style">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600&family=Poppins:wght@500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/home.css" />
 
-  <style>
-    @font-face {
-      font-family: 'Raleway';
-      font-style: normal;
-      font-weight: 400;
-      font-display: swap;
-      src: url(/fonts/raleway-400.woff) format('woff');
-      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-    }
+  <meta name="description"
+    content="Drive Conversions the Smarter Way. You’ve put in the work acquiring leads, let us help you convert them. Navu delivers the right message to the right visitor, every time." />
+  <link rel="icon" href="https://navu.co/content/images/size/w256h256/format/png/2022/09/fav.webp" type="image/png" />
+  <link rel="canonical" href="https://navu.co/" />
+  <meta name="referrer" content="no-referrer-when-downgrade" />
 
-    body {
-      margin: 0;
-      --system-font: "SF Pro Display", -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial, sans-serif;
-      --title-font: 'Raleway', sans-serif;
-      font-family: var(--system-font);
-      font-weight: 400;
-      line-height: 1.5;
-      -webkit-font-smoothing: subpixel-antialiased;
-      font-size: 18px;
-      overflow-x: hidden;
+  <meta property="og:site_name" content="Navu" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Navu" />
+  <meta property="og:description"
+    content="Drive Conversions the Smarter Way. You’ve put in the work acquiring leads, let us help you convert them. Navu delivers the right message to the right visitor, every time." />
+  <meta property="og:url" content="https://navu.co/" />
+  <meta property="og:image" content="https://navu.co/content/images/2023/02/Square---White-on-Gradient-1.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Navu" />
+  <meta name="twitter:description"
+    content="Drive Conversions the Smarter Way. You’ve put in the work acquiring leads, let us help you convert them. Navu delivers the right message to the right visitor, every time." />
+  <meta name="twitter:url" content="https://navu.co/" />
+  <meta name="twitter:image" content="https://navu.co/content/images/2023/02/Square---White-on-Gradient-1.png" />
+  <meta name="twitter:site" content="@navuhq" />
+  <meta property="og:image:width" content="1280" />
+  <meta property="og:image:height" content="699" />
 
-      --c4-primary-blue: #0277BD;
-      --c4-theme-primary: var(--c4-primary-blue);
-      --c4-theme-on-primary: #ffffff;
-      --c4-theme-primary-alt: #0B4D6B;
-      --c4-theme-secondary: #FBCCA6;
-      --c4-theme-on-secondary: #000000;
-      --c4-theme-on-surface: #242424;
-      --c4-theme-dark-surface: #242424;
-      --c4-theme-on-dark-surface: #ffffff;
-
-      --home-button-color: #1292ee;
-      --home-dark-bg: #242424;
-      --home-on-light: #242424;
-      --home-light-bg: #ffffff;
-      --home-on-dark: #ffffff;
-      --home-title-on-light: #0277BD;
-      --home-title-on-dark: #90D9E1;
-
-      background-color: var(--home-dark-bg);
-      color: var(--home-on-dark);
-
-      min-height: 100vh;
-      position: relative;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    connected-dots {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      pointer-events: none;
-      opacity: 0.5;
-    }
-
-    #bannerLogo {
-      display: flex;
-      position: relative;
-      vertical-align: middle;
-      fill: currentColor;
-      stroke: none;
-      height: 64px;
-      padding: 0 16px;
-      align-items: center;
-      justify-content: center;
-    }
-
-    #bannerLogo svg {
-      pointer-events: none;
-      display: block;
-      height: 100%;
-      width: auto;
-      stroke: currentColor;
-      fill: none;
-      stroke-width: 30;
-    }
-
-    header {
-      padding: 64px 0px 1px;
-    }
-
-    h1 {
-      width: 0;
-      height: 0;
-      overflow: hidden;
-      opacity: 0;
-    }
-
-    main {
-      max-width: 790px;
-      margin: 0 auto;
-      --font-size-base: 18px;
-      font-family: 'Poppins', sans-serif;
-      padding: 0 16px 32px;
-      text-align: center;
-    }
-
-    a {
-      color: inherit;
-    }
-
-    a.button {
-      background: var(--home-button-color);
-      color: white;
-      display: inline-block;
-      text-decoration: none;
-      font-size: 14px;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      font-weight: 400;
-      padding: 10px 16px;
-      border-radius: 4px;
-      min-width: 200px;
-    }
-
-    @media (max-width: 600px) {
-      #bannerLogo {
-        height: 54px;
-      }
-    }
-  </style>
-
-  <script async src="./script.js"></script>
+  <script async defer src="/home.js"></script>
 </head>
 
 <body>
-  <connected-dots></connected-dots>
+  <header>
+    <nav id="desktopNav" class="horiz center">
+      <a href="https://navu.co/"><navu-home-logo></navu-home-logo></a>
+    </nav>
+  </header>
+  <main>
+    <style>
+      sally-graphic {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate3d(0, 10%, 0);
+        pointer-events: none;
+        opacity: 1;
+        transition: opacity 0.3s ease, transform 0.5s ease;
+      }
 
-  <div id="contentPanel">
-    <header>
-      <div id="bannerLogo">
-        <svg viewBox="0 0 1142 317.35" preserveAspectRatio="xMidYMid meet" focusable="false">
-          <path d="M15,141.64c0-68,54.39-123,121.6-123"></path>
-          <path d="M264,148.67c0-71.87-57.5-130-128.55-130"></path>
-          <line x1="15" y1="141.64" x2="15" y2="317.35"></line>
-          <line x1="264" y1="148.67" x2="264" y2="317.35"></line>
-          <path d="M318.5,309.6c60.08-114.93,143.55-276,143.55-276l132.45,276"></path>
-          <path d="M1127,178.6c0,68-54.39,123-121.6,123"></path>
-          <path d="M878,171.57c0,71.87,57.5,130,128.55,130"></path>
-          <line x1="1127" y1="178.6" x2="1127" y2="2.89"></line>
-          <line x1="878" y1="171.57" x2="878" y2="2.89"></line>
-          <path d="M823.5,7.6C763.42,122.52,680,283.6,680,283.6L547.5,7.6"></path>
-        </svg>
-      </div>
-      <h1>Navu</h1>
-    </header>
-    <main>
-      <p>Slickstream for Business is now Navu.<br> Your subscription is not changing, and you can sign in below to
-        access your portal.</p>
-      <p style="margin: 2em 0;"></p>
-      <p>
-        <a href="https://accounts.navu.app" class="button">Sign In</a>
-      </p>
-      <p style="margin: 2em 0;"></p>
-      <p>
-        We're hard at work building the next generation of conversion optimization software at <a
-          href="https://navu.io">navu.io</a>.
-        If you have any questions, suggestions or comments, please <a href="mailto: contact@navu.io">reach out to us
-          directly</a>.
-      </p>
-      <p>
-        Thanks for your continued support,<br>
-        The Slickstream/Navu Team
-      </p>
-    </main>
-  </div>
+      sally-graphic.hidden {
+        opacity: 0;
+        transform: translate3d(-100%, 10%, 0);
+      }
+
+      navu-home-action-widget {
+        transform: scale(1.15);
+      }
+
+      @media (max-width: 1082px) {
+        navu-home-action-widget {
+          transform: scale(1);
+        }
+      }
+
+      @media (max-width: 690px) {
+        #featureWidgetPanel {
+          transform-origin: top center;
+          transform: scale(0.6);
+        }
+
+        #featureWidgetPanelCell {
+          max-height: 280px;
+          background: #f6f6f4;
+          margin-left: -16px;
+          margin-right: -16px;
+        }
+      }
+    </style>
+
+    <div style="position: relative;">
+      <div id="bgGradient"></div>
+      <section class="hero horiz center">
+        <div class="flex">
+          <h1>Slickstream for Business is now Navu</h1>
+          <p>We're hard at work building the next generation of conversion optimization software at <a
+              href="https://navu.co/">navu.co</a> </p>
+          <div class="horiz center" style="gap: 18px; margin: 1em 0 0;">
+            <div>
+              <a class="get-started-link" href="https://navu.co/">
+                <button class="solid horiz center2">
+                  <span>Visit Navu</span>
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div style="border-top: 2px solid #e5e5e5;">
+      <section class="lefty">
+        <p>Your Slickstream for Business subscription is not changing, and you can sign in below to access your portal.
+        </p>
+        <p>
+          <a class="get-started-link" href="https://accounts.navu.app/">
+            <button class="solid horiz center2" style="font-size: 15px; padding: 12px 16px;">
+              <span>Sign in</span>
+              <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                style="pointer-events: none;display: inline-block;width: 24px;height: 24px;vertical-align: middle;fill: white;">
+                <g>
+                  <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"></path>
+                </g>
+              </svg>
+            </button>
+          </a>
+        </p>
+      </section>
+    </div>
+  </main>
+
 </body>
 
 </html>
